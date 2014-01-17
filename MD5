@@ -1,0 +1,14 @@
+26a5d462de9510e90c9210d1e98acd67 *DESCRIPTION
+0bd0f18f757e640c8cbaf570480e1759 *NAMESPACE
+4928d721669ec827162fc633aff47646 *R/CE.R
+927a5c68bc4d79248496efade91123b4 *R/betarand.R
+5c87b04134215afd4fbbc1f13025c389 *R/ce.beta.R
+a919f4579faadabbd2169dd4c06286e9 *R/create.folder.R
+13ce031463d826d3d276adc781a21f55 *R/fun_alpha.R
+678fc80364c6a45ce9cfd63558424c89 *R/fun_beta.R
+2adbab2269ea10630f486b291dd3a99b *R/modi.BICnorm.new.R
+15a6de3f94e4267652a36bec5b8afa97 *R/plott.R
+9943d1faa83095f13713f1f22c384f47 *data/data.rda
+570cb53cc6e45f83fdb0661aaafb603c *man/CE.Rd
+20a12aa4def05d52b3b364b56bad8348 *man/breakpoint-package.Rd
+c9e8cb95675618a10813185977f098f2 *man/data.Rd
