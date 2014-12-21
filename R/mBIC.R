@@ -1,9 +1,11 @@
-modi.BICnorm.new <-
+mBIC <-
 function(b,data,N,L,h) {
   
   dif<-diff(b)
   
-  if(any(dif<h)){
+  if(N==0){
+    mbic<-0
+  } else if(any(dif<h)){
     mbic<- -100000
   } else {  
     

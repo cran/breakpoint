@@ -1,4 +1,4 @@
 #exportPattern("^[[:alpha:]]+")
 
-export(CE)
-import(ggplot2, foreach)
+export(CE.Normal, CE.NB, CE.ZINB, profilePlot)
+import(ggplot2,doParallel, MASS, msm, foreach, parallel)
