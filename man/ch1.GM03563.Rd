@@ -9,7 +9,7 @@ Chromosome 1 of cell line GM03563
 }
 \usage{data("ch1.GM03563")}
 \format{
-A single column data frame with 135 observations that corresponds to chromosome 1 of cell line GM03563.
+A single column data frame with 135 observations corresponds to chromosome 1 of cell line GM03563.
 \describe{
     \item{\code{log2ratio}}{normalized average of the log base 2 test over reference ratio data}
   }
@@ -24,11 +24,11 @@ Snijders,A.M. et al. (2001) Assembly of microarrays for genome-wide measurement 
 data(ch1.GM03563)
 \dontrun{
 ## CE with four parameter beta distribution ##
-obj1 <- CE.Normal(ch1.GM03563, distyp = 1, parallel =TRUE)
+obj1 <- CE.Normal.Mean(ch1.GM03563, distyp = 1, parallel =TRUE)
 profilePlot(obj1, ch1.GM03563)
 
 ## CE with truncated normal distribution ##
-obj2 <- CE.Normal(ch1.GM03563, distyp = 2, parallel =TRUE)
+obj2 <- CE.Normal.Mean(ch1.GM03563, distyp = 2, parallel =TRUE)
 profilePlot(obj2, ch1.GM03563)
 }}
 \keyword{data}

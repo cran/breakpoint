@@ -12,7 +12,7 @@ function(N, data, h, L0, L, M, Melite, eps, a){
   ########################Parameter initialization######################################################  
   new.para <- array(1, dim = c(2, N))
   ######################################################################################################  
-  modbic <- c()
+#  modbic <- c()
   k <- 0
   repeat
   {
@@ -26,7 +26,7 @@ function(N, data, h, L0, L, M, Melite, eps, a){
     ch <- cbind(ch, mod.bic)                         
     ch <- ch[order(ch[, (N + 3)], decreasing = TRUE), ]  
     melitesmpl <- ch[1 : Melite, ]                     
-    modbic[k] <- melitesmpl[1, (N + 3)] 
+#    modbic[k] <- melitesmpl[1, (N + 3)] 
     
     newpar.n <- array(0, dim = c(2, N))
     newpar.n[1, ] <- apply(as.matrix(melitesmpl[, (2 :(N + 1))]), 2, mean)
@@ -41,6 +41,7 @@ function(N, data, h, L0, L, M, Melite, eps, a){
     
     if(max(mad) <= eps){break}
   }
-  return(list(loci = ch[1, (1 : (N + 2))], mBIC = modbic[k]))
+#  return(list(loci = ch[1, (1 : (N + 2))], mBIC = modbic[k]))
+  return(list(loci = ch[1, (1 : (N + 2))], mBIC = melitesmpl[1, (N + 3)][[1]]))
   }
 }

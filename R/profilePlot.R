@@ -1,4 +1,5 @@
-profilePlot <- function(obj, data, x.label="Data Sequence", y.label="Value"){
+profilePlot <-
+function(obj, data, x.label="Data Sequence", y.label="Value"){
   L <- length(data[, 1])
   L0 <- 1      
   xaxis<-seq(1, L, 1)

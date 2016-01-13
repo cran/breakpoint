@@ -1,5 +1,5 @@
-ce.simnormal <-
-function(N,data,h,L0,L,M,Melite,eps,a,b){
+ce.simnormal.Init.mBIC <-
+function(N, init.locs, data, h, L0, L, M, Melite, eps, a, b, var.init){
   
   if (N==0){
     seql<-c(1,L)
@@ -11,7 +11,7 @@ function(N,data,h,L0,L,M,Melite,eps,a,b){
   } else {
     
   ########################Parameter initialization######################################################  
-  new_para<-rbind(rep(L0+(L-L0)/2,N),rep(sqrt(L-L0)^2/12,N))    
+    new_para <- rbind(init.locs, rep(var.init, N))    
   ######################################################################################################  
 #  modbic<-c()
   
@@ -42,6 +42,6 @@ function(N,data,h,L0,L,M,Melite,eps,a,b){
     if(max(mad)<=eps){break}
   }
 #  return(list(loci=ch[1,(1:(N+2))], mBIC=modbic[k]))
-  return(list(loci=ch[1,(1:(N+2))], mBIC=melitesmpl[1,(N+3)]))
+  return(list(loci=ch[1,(1:(N+2))], mBIC=melitesmpl[1,(N+3)][[1]]))
   }
 }
